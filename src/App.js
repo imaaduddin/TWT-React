@@ -6,7 +6,9 @@ function App() {
   return (
     <div className="App">
       <Info />
-      <AddItem />
+      <AddItem text="Imaad" number={13}/>
+      <AddItem text="Naruto" number={7}/>
+      <AddItem text="Shikimaru" number={10}/>
     </div>
   );
 }
