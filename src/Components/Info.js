@@ -1,19 +1,21 @@
-import React from "react";
+// For practice
 
-// function based component
-function Info() {
-  const title = "This is my title.";
-  const showTitle = true;
+// import React from "react";
 
-  return (
-    <div>
-      <p>{1 + 3}</p>
-      <h1>{showTitle ? title : ""}</h1>
-      <h1>Inventory System</h1>
-      <p>Manage your stuff.</p>
-    </div>
-  )
-}
+// // function based component
+// function Info() {
+//   const title = "This is my title.";
+//   const showTitle = true;
+
+//   return (
+//     <div>
+//       <p>{1 + 3}</p>
+//       <h1>{showTitle ? title : ""}</h1>
+//       <h1>Inventory System</h1>
+//       <p>Manage your stuff.</p>
+//     </div>
+//   )
+// }
 
 // class based component
 // class Info extends React.Component {
@@ -32,4 +34,4 @@ function Info() {
 //   }
 // }
 
-export default Info;
+// export default Info;

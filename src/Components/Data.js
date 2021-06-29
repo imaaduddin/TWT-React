@@ -1,12 +1,14 @@
-import React from "react";
+// For practice and reference
 
-function Data(props) {
-  return (
-    <div>
-      <p>Title:{props.title}</p>
-      <p>Count:{props.count}</p>
-    </div>
-  )
-}
+// import React from "react";
 
-export default Data;
+// function Data(props) {
+//   return (
+//     <div>
+//       <p>Title:{props.title}</p>
+//       <p>Count:{props.count}</p>
+//     </div>
+//   )
+// }
+
+// export default Data;
