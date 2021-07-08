@@ -1,16 +1,38 @@
-// For practice and refernce to
+import React from "react";
+import {useState} from "react";
 
-// import React from "react";
+function AddItem(props) {
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState(0);
+  const [type, setType] = useState("");
+  const [brand, setBrand] = useState("");
 
-// function AddItem(props) {
-//   const value = props.text;
-//   return (
-//     <div>
-//       <label for="text-form">Type something:</label>
-//       <input type="text" value={value} id="text-form"/>
-//       <p>{props.number}</p>
-//     </div>
-//   )
-// }
+  const addItemButtonPressed = () => {
+    props.addItem({
+      name: name, price: price, type: type, brand: brand
+    });
+    setName("");
+    setPrice(0);
+    setType("");
+    setBrand("");
+  };
 
-// export default AddItem;
+  return (
+    <div>
+      <h2>Add an item</h2>
+      <form>
+        <label for="name-field">Name:</label>
+        <input id="name-field" type="text" value={name} onChange={(e) => setName(e.target.value)}/>
+        <label for="price-field">Price:</label>
+        <input id="price-field" type="number" value={price} onChange={(e) => setPrice(e.target.value)}/>
+        <label for="type-field">Type:</label>
+        <input id="type-field" type="text" value={type} onChange={(e) => setType(e.target.value)}/>
+        <label for="brand-field">Brand:</label>
+        <input id="brand-field" type="text" value={brand} onChange={(e) => setBrand(e.target.value)}/>
+        <button type="button" onClick={addItemButtonPressed}>Add Item</button>
+      </form>
+    </div>
+  )
+}
+
+export default AddItem;
