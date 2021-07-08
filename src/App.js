@@ -12,6 +12,10 @@ function App() {
   return (
     <div className="App">
       <SearchBar callback={updateData}/>
+      <p>Name: {"name" in data ? data["name"] : "No data to display"}</p>
+      <p>Max Price: {"price" in data ? data["price"] : "No data to display"}</p>
+      <p>Type: {"type" in data ? data["type"] : "No data to display"}</p>
+      <p>Brand: {"brand" in data ? data["brand"] : "No data to display"}</p>
     </div>
   );
 }

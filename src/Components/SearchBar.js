@@ -8,10 +8,7 @@ function SearchBar(props) {
   const [brand, setBrand] = useState("");
 
   const searchButtonPressed = () => {
-    console.log(name);
-    console.log(price);
-    console.log(type);
-    console.log(brand);
+    props.callback({name: name, price: price, type: type, brand: brand})
   }
 
   return (
@@ -28,10 +25,6 @@ function SearchBar(props) {
         <input id="brand-field" type="text" value={brand} onChange={(e) => setBrand(e.target.value)}/>
         <button type="button" onClick={searchButtonPressed}>Search</button>
       </form>
-      <p>Name: {name}</p>
-      <p>Max Price: {price}</p>
-      <p>Type: {type}</p>
-      <p>Brand: {brand}</p>
     </div>
   )
 }
