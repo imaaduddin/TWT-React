@@ -23,11 +23,17 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="container">
       {/* <Title color="red">Testing</Title> */}
-      <SearchBar updateSearchParams={updateFilters}/>
-      <ItemsDisplay items={data["items"]}/>
-      <AddItem addItem={addItemTodata}/>
+      <div className="row mt-3">
+        <ItemsDisplay items={data["items"]}/>
+      </div>
+      <div className="row mt-3">
+        <SearchBar updateSearchParams={updateFilters}/>
+      </div>
+      <div className="row mt-3">
+        <AddItem addItem={addItemTodata}/>
+      </div>
       {/* <p>Name: {"name" in data ? data["name"] : "No data to display"}</p>
       <p>Max Price: {"price" in data ? data["price"] : "No data to display"}</p>
       <p>Type: {"type" in data ? data["type"] : "No data to display"}</p>
