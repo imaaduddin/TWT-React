@@ -36,10 +36,9 @@ function SearchBar(props) {
           <input id="brand-field" type="text" className="form-control" value={brand} onChange={(e) => setBrand(e.target.value)}/>
         </div>
       </div>
-      <div className="row">
-        <div className="col-4">
+      <div className="row mt-3">
+        <div className="col-4"/>
           <button type="button" className="col-4 btn btn-primary" onClick={searchButtonPressed}>Search</button>
-        </div>
       </div>
     </div>
   )
