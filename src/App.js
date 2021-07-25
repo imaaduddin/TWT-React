@@ -3,6 +3,7 @@ import SearchBar from './Components/SearchBar';
 import {useState} from "react";
 import AddItem from './Components/AddItem';
 import ItemsDisplay from './Components/ItemsDisplay';
+import Test from './Components/Class';
 // import styled from 'styled-components';
 
 // const Title = styled.h1`color: ${(props) => props.color ? props.color : "black"};` 
@@ -23,12 +24,15 @@ function App() {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
-      }
+      },
+      body: JSON.stringify(item),
     }
-    fetch("http://localhost:3000/items", requestOptions);
-
-    items.push(item);
-    setData({items: items})
+    fetch("http://localhost:3000/items", requestOptions)
+      .then((response) => response.json())
+      .then((data) => {
+        items.push(data);
+        setData({items: items})
+      });
   }
 
   const filterData = (data) => {
@@ -73,10 +77,6 @@ function App() {
       <div className="row mt-3">
         <AddItem addItem={addItemTodata}/>
       </div>
-      {/* <p>Name: {"name" in data ? data["name"] : "No data to display"}</p>
-      <p>Max Price: {"price" in data ? data["price"] : "No data to display"}</p>
-      <p>Type: {"type" in data ? data["type"] : "No data to display"}</p>
-      <p>Brand: {"brand" in data ? data["brand"] : "No data to display"}</p> */}
     </div>
   );
 }
